@@ -3,6 +3,7 @@ $(document).ready(function(){
 
     $(".container").hide();
     $(".container2").show();
+    })
     $(".info").on('submit', function(event){
       event.preventDefault();
     var firstName = $("#fname").val();
@@ -12,7 +13,7 @@ $(document).ready(function(){
      $("#names ").append("<li>"+contact1.firstname+" "+contact1.lastname+"</li>");
        $(".container").show();
        $(".container2").fadeOut();
-       //return false;
+       alert( $(this).data("contact1").toSource() );
      })
-  })
+
 })
